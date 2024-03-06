@@ -9,7 +9,7 @@
 }
 
 .category--selected .category {
-    color: orange;
+    color: var(--color-nemo-mid);
 }
 
 .count {
@@ -19,6 +19,6 @@
 }
 
 .category--selected .count {
-    background-color: orange;
-    color: white;
+    background-color: var(--color-nemo-mid);
+    color: var(--color-foam);
 }

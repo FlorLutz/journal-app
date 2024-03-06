@@ -1,0 +1,22 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 40px
+}
+
+.form__headline {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: smaller;
+}
+
+.form__button {
+    background-color: var(--color-nemo);
+    color: white;
+    width: 80px;
+    height: 30px;
+    align-self: center;
+    border: none;
+    border-radius: 5px;
+}
