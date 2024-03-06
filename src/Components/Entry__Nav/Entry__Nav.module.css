@@ -1,0 +1,24 @@
+.nav__container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.category {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.category--selected .category {
+    color: var(--color-nemo-mid);
+}
+
+.count {
+    background-color: lightgrey;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+.category--selected .count {
+    background-color: var(--color-nemo-mid);
+    color: var(--color-foam);
+}

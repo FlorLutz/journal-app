@@ -1,0 +1,9 @@
+.headline {
+    text-transform: uppercase;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    background-color: var(--color-water-10);
+    height: 45px;
+    width: 100%
+}
