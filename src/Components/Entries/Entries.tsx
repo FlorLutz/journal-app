@@ -3,24 +3,42 @@ import Entry from "./../Entry/Entry.tsx";
 import EntryNav from "./../Entry__Nav/Entry__Nav.tsx";
 
 export default function Entries() {
+  const entries = [
+    {
+      id: 1000,
+      date: "Feb 5, 2025",
+      motto: "We are in a state of chaos",
+      notes:
+        "Today I learned about React State. It was fun! I can't wait to learn more.",
+    },
+    {
+      id: 999,
+      date: "Feb 4, 2025",
+      motto: "Props, Props, Props",
+      notes:
+        "Today I learned about React Props. Mad props to everyone who understands this!",
+    },
+    {
+      id: 998,
+      date: "Feb 3, 2025",
+      motto: "How to nest components online fast",
+      notes:
+        "Today I learned about React Components and how to nest them like a pro. Application design is so much fun!",
+    },
+    {
+      id: 997,
+      date: "Feb 2, 2025",
+      motto: "I'm a React Developer",
+      notes: "My React-ion when I learned about React: 😍",
+    },
+  ];
+
   return (
     <>
       <EntryNav />
-      <Entry
-        date="FEB 25, 2028"
-        headline="That's life in the city"
-        content="This is my first entry. I so love it here."
-      />
-      <Entry
-        date="FEB 26, 2028"
-        headline="That's still life in the city"
-        content="This is my second entry. I don't like it here that much."
-      />
-      <Entry
-        date="FEB 27, 2028"
-        headline="That's event now life in the city"
-        content="This is my third entry. This city smells funny."
-      />
+      {entries.map(({ id, date, motto, notes }) => {
+        return <Entry key={id} date={date} headline={motto} content={notes} />;
+      })}
     </>
   );
 }
