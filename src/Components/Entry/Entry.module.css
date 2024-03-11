@@ -1,15 +1,11 @@
 .entry__date {
     text-align: center;
     margin-top: 20px;
-    border-top: solid var(--color-water-10) 3px;
     padding-top: 20px;
 }
 
 .entry__headlineContainer {
     display: flex;
     justify-content: space-between;
-}
-
-.entry__date:first-of-type {
-    border: none;
+    margin-bottom: 5px;
 }

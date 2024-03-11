@@ -2,8 +2,15 @@ import styles from "./Entries.module.css";
 import Entry from "./../Entry/Entry.tsx";
 import EntryNav from "./../Entry__Nav/Entry__Nav.tsx";
 
+interface Entry {
+  id: number;
+  date: string;
+  motto: string;
+  notes: string;
+}
+
 export default function Entries() {
-  const entries = [
+  const entries: Entry[] = [
     {
       id: 1000,
       date: "Feb 5, 2025",
@@ -36,8 +43,17 @@ export default function Entries() {
   return (
     <>
       <EntryNav />
-      {entries.map(({ id, date, motto, notes }) => {
-        return <Entry key={id} date={date} headline={motto} content={notes} />;
+      {entries.map(({ id, date, motto, notes }, index) => {
+        return (
+          <>
+            <Entry key={id} date={date} headline={motto} content={notes} />
+            {index === entries.length - 1 ? (
+              ""
+            ) : (
+              <hr className={styles.divider}></hr>
+            )}
+          </>
+        );
       })}
     </>
   );
